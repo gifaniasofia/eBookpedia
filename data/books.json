@@ -1,0 +1,362 @@
+[
+  {
+    "title": "World War Z: An Oral History of the Zombie War",
+    "isbn": "9780307351937",
+    "published_year": 2006,
+    "publisher": "Del Rey",
+    "author": "Max Brooks",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "World War Z",
+    "isbn": "9788758813820",
+    "published_year": 2014,
+    "publisher": "Tellerup A/S",
+    "author": "Max Brooks",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Titik Nadir Demokrasi",
+    "isbn": "9786022911654",
+    "published_year": 2014,
+    "publisher": "Bentang Pustaka",
+    "author": "Emha Ainun Nadjib",
+    "category": "Novel",
+    "rent_price": 15000
+  },
+  {
+    "title": "Bumi Manusia: Tetralogi Buru #1",
+    "isbn": "9789798659126",
+    "published_year": 2002,
+    "publisher": "Hasta Mitra",
+    "author": "Pramoedya Ananta Toer",
+    "category": "Novel",
+    "rent_price": 30000
+  },
+  {
+    "title": "Anak Semua Bangsa: Tetralogi Buru # 2",
+    "isbn": "9789798659133",
+    "published_year": 2002,
+    "publisher": "Hasta Mitra",
+    "author": "Pramoedya Ananta Toer",
+    "category": "Novel",
+    "rent_price": 30000
+  },
+  {
+    "title": "Jejak Langkah: Tetralogi Buru # 3",
+    "isbn": "9789798659140",
+    "published_year": 2000,
+    "publisher": "Hasta Mitra",
+    "author": "Pramoedya Ananta Toer",
+    "category": "Novel",
+    "rent_price": 30000
+  },
+  {
+    "title": "Rumah Kaca: Tetralogi Buru # 4",
+    "isbn": "9789798659157",
+    "published_year": 2001,
+    "publisher": "Hasta Mitra",
+    "author": "Pramoedya Ananta Toer",
+    "category": "Novel",
+    "rent_price": 30000
+  },
+  {
+    "title": "That Time I Got Reincarnated as a Slime Vol 10",
+    "isbn": "9781975314408",
+    "published_year": 2021,
+    "publisher": "Yen Press LLC",
+    "author": "Fuse",
+    "category": "Comic",
+    "rent_price": 9000
+  },
+  {
+    "title": "Bridgerton: The Duke and I",
+    "isbn": "9780062424037",
+    "published_year": 2015,
+    "publisher": "HarperCollins",
+    "author": "Julia Quinn",
+    "category": "Novel",
+    "rent_price": 45000
+  },
+  {
+    "title": "Rhythm of War: Book Four of The Stormlight Archive",
+    "isbn": "9781429952040",
+    "published_year": 2020,
+    "publisher": "Tor Books",
+    "author": "Brandon Sanderson",
+    "category": "Novel",
+    "rent_price": 150000
+  },
+  {
+    "title": "Rhythm of War",
+    "isbn": "9780575093409",
+    "published_year": 2020,
+    "publisher": "Hachette UK",
+    "author": "Brandon Sanderson",
+    "category": "Novel",
+    "rent_price": 150000
+  },
+  {
+    "title": "Mushoku Tensei: Jobless Reincarnation (Light Novel) Vol 9",
+    "isbn": "9781645055709",
+    "published_year": 2021,
+    "publisher": "Seven SeasEntertainment",
+    "author": "Rifujin na Magonote",
+    "category": "Comic",
+    "rent_price": 20000
+  },
+  {
+    "title": "Publication Manual of the American Psychological Association: 7th Edition",
+    "isbn": "9782123513704",
+    "published_year": 2005,
+    "publisher": "almohreraladbi",
+    "author": "American Psychological Association",
+    "category": "Literature",
+    "rent_price": 100000
+  },
+  {
+    "title": "A Promised Land",
+    "isbn": "9781524763183",
+    "published_year": 2020,
+    "publisher": "Crown",
+    "author": "Barack Obama",
+    "category": "Biography",
+    "rent_price": 100000
+  },
+  {
+    "title": "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
+    "isbn": "9780062457738",
+    "published_year": 2016,
+    "publisher": "HarperCollins",
+    "author": "Mark Manson",
+    "category": "Motivation",
+    "rent_price": 50000
+  },
+  {
+    "title": "The Boy Who Has No Redemption",
+    "isbn": "9780575093582",
+    "published_year": 2021,
+    "publisher": "Hartwick Publishing",
+    "author": "Victoria Quinn",
+    "category": "Novel",
+    "rent_price": 70000
+  },
+  {
+    "title": "12 Rules for Life: An Antidote to Chaos",
+    "isbn": "9780345816047",
+    "published_year": 2018,
+    "publisher": "Random House Canada",
+    "author": "Jordan B",
+    "category": "Motivation",
+    "rent_price": 40000
+  },
+  {
+    "title": "Mushoku Tensei: Jobless Reincarnation (Light Novel) Vol 1",
+    "isbn": "9781645051619",
+    "published_year": 2019,
+    "publisher": "Seven Seas Entertainment",
+    "author": "Rifujin na Magonote",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Misteri Patung Garam",
+    "isbn": "9789797807863",
+    "published_year": 2015,
+    "publisher": "GagasMedia",
+    "author": "Ruwi Meita",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Aku Tahu Kapan Kamu Mati",
+    "isbn": "9786025406720",
+    "published_year": 2018,
+    "publisher": "Loveable",
+    "author": "Arumi E",
+    "category": "Novel",
+    "rent_price": 35000
+  },
+  {
+    "title": "Me Before You",
+    "isbn": "9781101606377",
+    "published_year": 2012,
+    "publisher": "Penguin",
+    "author": "Jojo Moyes",
+    "category": "Novel",
+    "rent_price": 50000
+  },
+  {
+    "title": "After You",
+    "isbn": "9780698152045",
+    "published_year": 2015,
+    "publisher": "Penguin",
+    "author": "Jojo Moyes",
+    "category": "Novel",
+    "rent_price": 50000
+  },
+  {
+    "title": "Still Me",
+    "isbn": "9780399562471",
+    "published_year": 2018,
+    "publisher": "Penguin",
+    "author": "Jojo Moyes",
+    "category": "Novel",
+    "rent_price": 50000
+  },
+  {
+    "title": "My Lecturer My Husband",
+    "isbn": "9786025023408",
+    "published_year": 2017,
+    "publisher": "RDM Publishers",
+    "author": "Gitlicious",
+    "category": "Novel",
+    "rent_price": 10000
+  },
+  {
+    "title": "AKSARA",
+    "isbn": "9786025024589",
+    "published_year": 2020,
+    "publisher": "Venom Publishers",
+    "author": "Zenny Arieffka",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Rudy: Kisah Masa Muda Sang Visioner",
+    "isbn": "9786022911111",
+    "published_year": 2015,
+    "publisher": "Bentang Pustaka",
+    "author": "Gina S Noer",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "The Black Book",
+    "isbn": "9786022910800",
+    "published_year": 2016,
+    "publisher": "Bentang Pustaka",
+    "author": "Orhan Pamuk",
+    "category": "Novel",
+    "rent_price": 30000
+  },
+  {
+    "title": "SUPERNOVA 1: Kesatria, Putri dan Bintang Jatuh",
+    "isbn": "9786022911314",
+    "published_year": 2001,
+    "publisher": "Bentang Pustaka",
+    "author": "Dee Lestari",
+    "category": "Novel",
+    "rent_price": 25000
+  },
+  {
+    "title": "SUPERNOVA 2: Akar",
+    "isbn": "9786022911315",
+    "published_year": 2002,
+    "publisher": "Bentang Pustaka",
+    "author": "Dee Lestari",
+    "category": "Novel",
+    "rent_price": 25000
+  },
+  {
+    "title": "SUPERNOVA 3: Petir",
+    "isbn": "9786022911316",
+    "published_year": 2004,
+    "publisher": "Bentang Pustaka",
+    "author": "Dee Lestari",
+    "category": "Novel",
+    "rent_price": 25000
+  },
+  {
+    "title": "SUPERNOVA 4: Partikel",
+    "isbn": "9786022911317",
+    "published_year": 2012,
+    "publisher": "Bentang Pustaka",
+    "author": "Dee Lestari",
+    "category": "Novel",
+    "rent_price": 25000
+  },
+  {
+    "title": "SUPERNOVA 5: Gelombang",
+    "isbn": "9786022911318",
+    "published_year": 2014,
+    "publisher": "Bentang Pustaka",
+    "author": "Dee Lestari",
+    "category": "Novel",
+    "rent_price": 25000
+  },
+  {
+    "title": "SUPERNOVA 6: Inteligensi Embun Pagi",
+    "isbn": "9786022911319",
+    "published_year": 2016,
+    "publisher": "Bentang Pustaka",
+    "author": "Dee Lestari",
+    "category": "Novel",
+    "rent_price": 25000
+  },
+  {
+    "title": "Rantau 1 Muara",
+    "isbn": "9789791738589",
+    "published_year": 2013,
+    "publisher": "Gramedia Pustaka Utama",
+    "author": "Ahmad Fuadi",
+    "category": "Sastra",
+    "rent_price": 30000
+  },
+  {
+    "title": "The Sacred Romance of King Sulaiman & Queen Sheba",
+    "isbn": "9789791738545",
+    "published_year": 2008,
+    "publisher": "PT Mizan Publika",
+    "author": "Waheeda El-Humarya",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Dilan: Dia adalah Dilanku Tahun 1990",
+    "isbn": "9786027870413",
+    "published_year": 2014,
+    "publisher": "PastelBooks",
+    "author": "Pidi Baiq",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Dilan 2: Dia adalah Dilanku Tahun 1991",
+    "isbn": "9786027870994",
+    "published_year": 2015,
+    "publisher": "PastelBooks",
+    "author": "Pidi Baiq",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "Milea: Suara dari Dilan",
+    "isbn": "9786020851563",
+    "published_year": 2016,
+    "publisher": "PastelBooks",
+    "author": "Pidi Baiq",
+    "category": "Novel",
+    "rent_price": 20000
+  },
+  {
+    "title": "The Magic of Thinking Big",
+    "isbn": "9780698198586",
+    "published_year": 2014,
+    "publisher": "Penguin",
+    "author": "David J. Schwartz",
+    "category": "Motivation",
+    "rent_price": 100000
+  },
+  {
+    "title": "A Theory of Everything",
+    "isbn": "9781570628559",
+    "published_year": 2000,
+    "publisher": "Shambala Publications",
+    "author": "Ken Wilber",
+    "category": "Literature",
+    "rent_price": 100000
+  }
+]
