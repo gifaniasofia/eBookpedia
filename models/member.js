@@ -24,6 +24,13 @@ module.exports = (sequelize, DataTypes) => {
     phone_number: DataTypes.INTEGER,
     gender: DataTypes.STRING
   }, {
+    hooks: {
+      beforeCreate(member, options) {
+        if (member.phone_number.substr(0, 2) == '08') {
+          member.phone_number = '+62' + member.phone_number.slice(1);
+        }
+      }
+    },
     sequelize,
     modelName: 'Member',
   });

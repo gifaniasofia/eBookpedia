@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Andika Bagaskara",
+    "email": "andikabagas@gmail.com",
+    "address": "Jl. Masjid Hidayah, Bandung Barat",
+    "phone_number": "+6285266489546",
+    "gender": "male"
+  },
+  {
+    "name": "Rizqi Hidayatullah",
+    "email": "rizqi123@gmail.com",
+    "address": "Jl. Jenderal Peyeum, Garut",
+    "phone_number": "+6281322358606",
+    "gender": "Male"
+  },
+  {
+    "name": "Trisha Sofia Ardiansyah",
+    "email": "ticasofia@gmail.com",
+    "address": "Jl. Soekarno Hatta, Bogor",
+    "phone_number": "+6283211685471",
+    "gender": "female"
+  },
+  {
+    "name": "Alexander Supriono",
+    "email": "alexsupri15@gmail.com",
+    "address": "Jl. Medan, Aceh",
+    "phone_number": "+6283211621687",
+    "gender": "male"
+  },
+  {
+    "name": "Calista Nurul Hussein",
+    "email": "calista@gmail.com",
+    "address": "Jl. Sumurbor, Makasar",
+    "phone_number": "+6285322352605",
+    "gender": "female"
+  },
+  {
+    "name": "Livia Safitri",
+    "email": "liviasafitri@gmail.com",
+    "address": "Jl. Trisula, Kabupaten Bandung Barat",
+    "phone_number": "+6285155229528",
+    "gender": "female"
+  },
+  {
+    "name": "Faris Sonda Gustianto",
+    "email": "farisgustian@gmail.com",
+    "address": "Jl. Pasar Atas, Cimahi",
+    "phone_number": "+6281548967583",
+    "gender": "male"
+  },
+  {
+    "name": "Fikri Sonda Gustianto",
+    "email": "fiktrigustian@gmail.com",
+    "address": "Jl. Pasar Atas, Cimahi",
+    "phone_number": "+6281495632879",
+    "gender": "male"
+  },
+  {
+    "name": "Dinda Khairunisa",
+    "email": "dindanisa21@gmail.com",
+    "address": "Jl. Penjara, Padang",
+    "phone_number": "+6285987462354",
+    "gender": "female"
+  },
+  {
+    "name": "Bayu Bimantara",
+    "email": "bimabayu12@gmail.com",
+    "address": "Jl. Wayang, Surabaya",
+    "phone_number": "+6285897462315",
+    "gender": "male"
+  }
+]

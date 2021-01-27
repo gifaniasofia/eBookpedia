@@ -8,6 +8,9 @@ app.set('view engine', 'ejs');
 
 app.use(express.urlencoded( { extended: true } ));
 
+app.use('/css', express.static('public/css'));
+app.use('/images', express.static('public/img'));
+
 app.use('/', router);
 
 app.listen(port, () => {
