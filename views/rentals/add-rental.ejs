@@ -12,16 +12,16 @@
     <div>
         <form action="/rentals/<%= page %>/add" method="POST">
             <label for="name">Member Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" id="name" name="name" required><br><br>
             <label for="bookId">Code Book :</label><br><br>
             <% dataBooks.forEach(book => { %>
                 <label class="checkbox-inline">
-                    <input type="checkbox" value="<%= book.id %>" name="bookId"><%= generateCodeBook(book.title, book.id, book.isbn) %>
+                    <input type="checkbox" value="<%= book.id %>" name="bookId" required><%= generateCodeBook(book.title, book.id, book.isbn) %>
                 </label>
             <% }) %><br><br>
 
             <label for="start_date"><b>Start Date:</b></label><br/>
-            <input type="date" name="start_date" value="YYYY-MM-DD"><br><br>
+            <input type="date" name="start_date" value="YYYY-MM-DD" required><br><br>
 
             <input type="submit" value="Save">
             <a href="/books">

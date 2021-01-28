@@ -6,16 +6,16 @@
     <div>
         <form action="/members/<%= page %>/add" method="POST">
             <label for="name"><b>Name</b></label><br/>
-            <input type="text" name="name" placeholder="e.g: Gifania Sofia"><br/>
+            <input type="text" name="name" placeholder="e.g: Gifania Sofia" required><br/>
 
             <label for="email"><b>Email</b></label><br/>
-            <input type="text" name="email" placeholder="e.g: gifaniasofia@mail.com"><br/>
+            <input type="text" name="email" placeholder="e.g: gifaniasofia@mail.com" required><br/>
 
             <label for="address"><b>Address</b></label><br/>
-            <input type="text" name="address" placeholder="e.g: Jl. Ganesha, Bandung"><br/>
+            <input type="text" name="address" placeholder="e.g: Jl. Ganesha, Bandung" required><br/>
 
             <label for="phone_number"><b>Phone Number</b></label><br/>
-            <input type="text" name="phone_number" placeholder="e.g: +6281223456789"><br/>
+            <input type="text" name="phone_number" placeholder="e.g: +6281223456789" required><br/>
 
             <label for="gender"><b>Gender</b></label><br/><br/>
             <input type="radio" name="gender" value="female">
