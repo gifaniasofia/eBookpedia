@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #1a508b;
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#navright {
+    float: right;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #0d335d;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    text-align: left;
+    color: black;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+input[type=text], input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input[type=submit] {
+    width: 12%;
+    background-color: #6dabe4;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type=submit]:hover {
+    background-color: #4292dc;
+}
+
+input[type=button] {
+    width: 12%;
+    background-color: #f16886;
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type=button]:hover {
+    background-color: #ee466b;
+}
+
+#optionPage {
+    width: 7%;
+    padding: 5px 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-edit {
+    background-color:#b58bce;
+    border: none;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #ff7070;
+    border: none;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #eb5e0b;
+    border: none;
+    width: 15%;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 540px;
+    float: right;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background-color: #df5200;
+}
+
+.btn-page {
+    background-color: #0d335d;
+    border: none;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2px 3px;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-page-active {
+    background-color: #faac6d;
+    border: none;
+    padding: 10px 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2px 3px;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+
+.btn-page:hover {
+    background-color: #faac6d;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}

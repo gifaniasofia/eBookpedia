@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Add Rental Data</h1>
+    <div>
+        <form action="/rentals/<%= page %>/add" method="POST">
+            <label for="name">Member Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="bookId">Code Book :</label><br><br>
+            <% dataBooks.forEach(book => { %>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="<%= book.id %>" name="bookId" required><%= generateCodeBook(book.title, book.id, book.isbn) %>
+                </label>
+            <% }) %><br><br>
+
+            <label for="start_date"><b>Start Date:</b></label><br/>
+            <input type="date" name="start_date" value="YYYY-MM-DD" required><br><br>
+
+            <input type="submit" value="Save">
+            <a href="/books">
+                <input type="button" value="Cancel">
+            </a>
+        </form>
+        <% if (errorValidation) { %>
+            <% errorValidation = errorValidation.split(',') %>
+            <% errorValidation.forEach(error => { %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>Warning! </strong><%= error %>
+                  </div>              
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

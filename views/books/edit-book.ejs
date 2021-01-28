@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <h1>Edit Book Data</h1>
+    <div>
+        <form action="/books/edit/<%= editBook.id %>" method="POST">
+            <label for="title"><b>Title</b></label><br/>
+            <input type="text" name="title" value="<%= editBook.title %>"><br/>
+
+            <label for="isbn"><b>ISBN</b></label><br/>
+            <input type="text" name="isbn" value="<%= editBook.isbn %>"><br/>
+
+            <label for="published_year"><b>Published Year</b></label><br/>
+            <input type="text" name="published_year" value="<%= editBook.published_year %>"><br/>
+
+            <label for="publisher"><b>Publisher</b></label><br/>
+            <input type="text" name="publisher" value="<%= editBook.publisher %>"><br/>
+
+            <label for="author"><b>Author</b></label><br/>
+            <input type="text" name="author" value="<%= editBook.author %>"><br/>
+
+            <label for="category"><b>Category</b></label><br/>
+            <select name="category">
+                <option value="" disabled>Select Category...</option>
+                <option value="Novel" <%= editBook.category == "Novel" && 'selected' %>>Novel</option>
+                <option value="Comic" <%= editBook.category == "Comic" && 'selected' %>>Comic</option>
+                <option value="Literature" <%= editBook.category == "Literature" && 'selected' %>>Literature</option>
+                <option value="Biography" <%= editBook.category == "Biography" && 'selected' %>>Biography</option>
+                <option value="Motivation" <%= editBook.category == "Motivation" && 'selected' %>>Motivation</option>
+            </select><br/>
+
+            <label for="rent_price"><b>Rental Price</b></label><br/>
+            <input type="text" name="rent_price" value="<%= editBook.rent_price %>"><br/>
+
+            <input type="submit" value="Update">
+            <a href="/books">
+                <input type="button" value="Cancel">
+            </a>
+        </form>
+        <% if (errorValidation) { %>
+            <% errorValidation = errorValidation.split(',') %>
+            <% errorValidation.forEach(error => { %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>Warning! </strong><%= error %>
+                  </div>              
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

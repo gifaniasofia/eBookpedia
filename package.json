@@ -1,0 +1,32 @@
+{
+  "name": "pair-project-eBookpedia",
+  "version": "1.0.0",
+  "description": "Pair project phase 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gifaniasofia/pair-project-eBookpedia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gifaniasofia/pair-project-eBookpedia/issues"
+  },
+  "homepage": "https://github.com/gifaniasofia/pair-project-eBookpedia#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "pg": "^8.5.1",
+    "sequelize": "^6.4.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}

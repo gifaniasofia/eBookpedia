@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <h1>Add Book Data</h1>
+    <div>
+        <form action="/books/<%= page %>/add" method="POST">
+            <label for="title"><b>Title</b></label><br/>
+            <input type="text" name="title" placeholder="e.g: Sherlock Holmes" required><br/>
+
+            <label for="isbn"><b>ISBN</b></label><br/>
+            <input type="text" name="isbn" placeholder="e.g: 992292992" required><br/>
+
+            <label for="published_year"><b>Published Year</b></label><br/>
+            <input type="text" name="published_year" placeholder="e.g: 1992" required><br/>
+
+            <label for="publisher"><b>Publisher</b></label><br/>
+            <input type="text" name="publisher" placeholder="e.g: Elexmedia" required><br/>
+
+            <label for="author"><b>Author</b></label><br/>
+            <input type="text" name="author" placeholder="e.g: Conan Doyle" required><br/>
+
+            <label for="category"><b>Category</b></label><br/>
+            <select name="category">
+                <option value="" disabled selected>Select Category...</option>
+                <option value="novel">Novel</option>
+                <option value="comic">Comic</option>
+                <option value="literature">Literature</option>
+                <option value="biography">Biography</option>
+                <option value="motivation">Motivation</option>
+            </select><br/>
+
+            <label for="rent_price"><b>Rental Price</b></label><br/>
+            <input type="text" name="rent_price" placeholder="e.g: 20000" required><br/>
+
+            <input type="submit" value="Save">
+            <a href="/books">
+                <input type="button" value="Cancel">
+            </a>
+        </form>
+        <% if (errorValidation) { %>
+            <% errorValidation = errorValidation.split(',') %>
+            <% errorValidation.forEach(error => { %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>Warning! </strong><%= error %>
+                  </div>              
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

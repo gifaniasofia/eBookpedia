@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <h1>Add Member Data</h1>
+    <div>
+        <form action="/members/<%= page %>/add" method="POST">
+            <label for="name"><b>Name</b></label><br/>
+            <input type="text" name="name" placeholder="e.g: Gifania Sofia" required><br/>
+
+            <label for="email"><b>Email</b></label><br/>
+            <input type="text" name="email" placeholder="e.g: gifaniasofia@mail.com" required><br/>
+
+            <label for="address"><b>Address</b></label><br/>
+            <input type="text" name="address" placeholder="e.g: Jl. Ganesha, Bandung" required><br/>
+
+            <label for="phone_number"><b>Phone Number</b></label><br/>
+            <input type="text" name="phone_number" placeholder="e.g: +6281223456789" required><br/>
+
+            <label for="gender"><b>Gender</b></label><br/><br/>
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="male">
+            <label for="male">Male</label><br/><br/>
+
+            <input type="submit" value="Save">
+            <a href="/members">
+                <input type="button" value="Cancel">
+            </a>
+        </form>
+        <% if (errorValidation) { %>
+            <% errorValidation = errorValidation.split(',') %>
+            <% errorValidation.forEach(error => { %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                    <strong>Warning! </strong><%= error %>
+                  </div>              
+            <% }) %>
+        <% } %>
+    </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div class="navbar">
+    <a href="/"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a> 
+    <a href="/members"><i class="fa fa-address-card" aria-hidden="true"></i> Members Data</a> 
+    <a href="/books"><i class="fa fa-book" aria-hidden="true"></i> Books Data</a> 
+    <a href="/rentals"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Rentals Data</a>
+    <% if (is_login) { %>
+        <a href="/logout" id="navright"><i class="fa fa-sign-out"></i>Sign Out</a>
+        <a href="/signup" id="navright"><i class="fa fa-fw fa-user"></i> Register</a>
+    <% } else { %>
+        <a href="/login" id="navright"><i class="fa fa-fw fa-user"></i> Login</a>
+        <a href="/signup" id="navright"><i class="fa fa-fw fa-user"></i> Register</a>
+    <% } %>
+</div>

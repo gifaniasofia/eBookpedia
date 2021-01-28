@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head.ejs') %>
+<body>
+<%- include('../partials/navbar.ejs') %>
+    <h1>Member List</h1>
+    <button class="btn-add"><a href="/members/<%= page %>/add">Add New member</a></button>
+    <form action="/members/<%= page %>" method="POST">
+        <label for="limit">Show:</label>
+        <select name="limit" id="optionPage">
+            <option value="5" <%= limit == "5" && 'selected' %>>5</option>
+            <option value="10" <%= limit == "10" && 'selected' %>>10</option>
+            <option value="15" <%= limit == "15" && 'selected' %>>15</option>
+            <option value="20" <%= limit == "20" && 'selected' %>>20</option>
+        </select>
+        <input type="submit" value="Submit" id="optionPage">
+    </form>
+    <% for (let i = 1; i <= totalPage; i++) { %>
+        <% if (i == page) { %>
+            <button class="btn-page-active"><a href="/members/<%= i %>?limit=<%= limit %>"><%= i %></a></button>
+        <% } else { %>
+            <button class="btn-page"><a href="/members/<%= i %>?limit=<%= limit %>"><%= i %></a></button>
+        <% } %>
+    <% } %>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone Number</th>
+            <th>Gender</th>
+            <th>Action</th>
+        </tr>
+        <% dataMembers.forEach((member, index) => { %>
+            <tr>
+                <td><%= offset + index + 1 %></td>
+                <td><%= member.withPrefixName() %></td>
+                <td><%= member.email %></td>
+                <td><%= member.address %></td>
+                <td><%= member.phone_number %> </td>
+                <td><%= member.gender %> </td>
+                <td><button class="btn-edit"><a href="/members/edit/<%= member.id %>" class="a-button">Edit</a></button><button class="btn-delete"><a href="/members/delete/<%= member.id %>" onclick="return confirm('Are you sure you want to delete this member data?')">Delete</a></button></td>      
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
