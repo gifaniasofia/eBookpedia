@@ -2,12 +2,13 @@ const { Member } = require('../models');
 
 class ControllerMember {
     static getList(req, res) {
-        let limit = 5;   // number of records per page
+        const is_login = req.session.user_id;
+        let limit = (req.query.limit) ? +req.query.limit : 5;
         let offset = 0;
 
         Member.findAndCountAll()
             .then((data) => {
-            let page = req.params.page;      // page number
+            let page = req.params.page;
             let pages = Math.ceil(data.count / limit);
             offset = limit * (page - 1);
 
@@ -18,13 +19,18 @@ class ControllerMember {
                 order: [['updatedAt', 'desc']]
             })
             .then((members) => {
-                res.render('members/list-member.ejs', { dataMembers: members, 'page': page, 'totalPage': pages, 'offset':offset })
-                // res.status(200).json({'dataMembers': members, 'count': data.count, 'pages': pages});
+                res.render('members/list-member.ejs', { dataMembers: members, 'page': page, 'totalPage': pages, 'offset':offset, is_login, limit })
             })
             })
             .catch(function (error) {
                 res.status(500).send('Internal Server Error');
             });
+    }
+
+    static postList(req, res) {
+        const limit = +req.body.limit;
+        const page = req.params.page;
+        res.redirect(`/members/${page}?limit=${limit}`)
     }
 
     static getDelete(req, res) {
@@ -40,7 +46,8 @@ class ControllerMember {
     static getAdd(req, res) {
         const errorValidation = req.query.alert;
         const page = req.params.page; 
-        res.render('members/add-member.ejs', { errorValidation, page });
+        const is_login = req.session.user_id;
+        res.render('members/add-member.ejs', { errorValidation, page, is_login });
     }
 
     static postAdd(req, res) {

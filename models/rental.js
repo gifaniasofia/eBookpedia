@@ -16,14 +16,16 @@ module.exports = (sequelize, DataTypes) => {
         through: models.RentalDetail,
         foreignKey: 'rentalId'
       });
+      // Rental.hasMany(models.RentalDetail, { foreignKey: 'rentalId' })
+      Rental.belongsTo(models.Member, { foreignKey: 'memberId' })
     }
   };
   Rental.init({
+    rental_code: DataTypes.INTEGER,
     memberId: DataTypes.INTEGER,
-    bookId: DataTypes.INTEGER,
     start_date: DataTypes.DATE,
-    expired_date: DataTypes.DATE,
-    status: DataTypes.STRING,
+    returned_date: DataTypes.DATE,
+    is_returned: DataTypes.BOOLEAN,
     userId: DataTypes.INTEGER
   }, {
     sequelize,

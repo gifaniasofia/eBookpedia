@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head.ejs') %>
+<body>
+<%- include('../partials/navbar.ejs') %>
+    <h1>Detail Rental Book List</h1>
+    <h2><%= data.Member.withPrefixName() %></h2>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Code-Book</th>
+            <th>Title</th>
+            <th>Published Year</th>
+            <th>Publisher</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Rental Price</th>
+        </tr>
+        <% let totalPrice = 0; %>
+        <% data.Books.forEach((book, index) => { %>
+            <tr>
+                <td><%= index + 1 %></td>
+                <td><%= generateCodeBook(book.title, book.id, book.isbn) %></td>
+                <td><%= book.title %></td>
+                <td><%= book.published_year %></td>
+                <td><%= book.publisher %></td>
+                <td><%= book.author %> </td>
+                <td><%= book.category %> </td>
+                <td><%= formatRupiah(book.rent_price) %> </td>
+                <% totalPrice += book.rent_price %>    
+            </tr>
+        <% }) %>
+        <tr>
+            <td colspan="8">Total Rental Price: <%= formatRupiah(totalPrice) %></td>
+        </tr>
+    </table>
+</body>
+</html>

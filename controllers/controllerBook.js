@@ -1,14 +1,16 @@
 const { Book } = require('../models');
 const generateCodeBook = require('../helpers/generateCodeBook.js');
+const formatRupiah = require('../helpers/formatRupiah.js');
 
 class ControllerBook {
     static getList(req, res) {
-        let limit = 5;   // number of records per page
+        const is_login = req.session.user_id;
+        let limit = (req.query.limit) ? +req.query.limit : 5;
         let offset = 0;
 
         Book.findAndCountAll()
             .then((data) => {
-            let page = req.params.page;      // page number
+            let page = req.params.page;
             let pages = Math.ceil(data.count / limit);
             offset = limit * (page - 1);
 
@@ -16,16 +18,21 @@ class ControllerBook {
                 limit: limit,
                 offset: offset,
                 $sort: { id: 1 },
-                order: [['updatedAt', 'desc']]
+                order: [['title', 'asc']]
             })
             .then((books) => {
-                res.render('books/list-book.ejs', { dataBooks: books, generateCodeBook, 'page': page, 'totalPage': pages, 'offset':offset })
-                // res.status(200).json({'dataBooks': books, 'count': data.count, 'pages': pages});
+                res.render('books/list-book.ejs', { dataBooks: books, generateCodeBook, 'page': page, 'totalPage': pages, 'offset':offset, is_login, formatRupiah, limit })
             })
             })
             .catch(function (error) {
                 res.status(500).send('Internal Server Error');
             });
+    }
+
+    static postList(req, res) {
+        const limit = +req.body.limit;
+        const page = req.params.page;
+        res.redirect(`/books/${page}?limit=${limit}`)
     }
 
     static getDelete(req, res) {
@@ -41,7 +48,8 @@ class ControllerBook {
     static getAdd(req, res) {
         const errorValidation = req.query.alert;
         const page = req.params.page; 
-        res.render('books/add-book.ejs', { errorValidation, page });
+        const is_login = req.session.user_id;
+        res.render('books/add-book.ejs', { errorValidation, page, is_login });
     }
 
     static postAdd(req, res) {

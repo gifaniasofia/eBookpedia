@@ -11,26 +11,64 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Member.belongsToMany(models.Book, {
-        through: models.Rental,
-        foreignKey: 'memberId'
-      })
+      Member.hasMany(models.Rental, { foreignKey: 'memberId' })
+    }
+
+    withPrefixName() {
+      if (this.gender === 'male') {
+        return `Mr. ${this.name}`
+      } else if (this.gender ==='female') {
+        return `Mrs. ${this.name}`
+      }
     }
   };
   Member.init({
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    address: DataTypes.STRING,
-    phone_number: DataTypes.INTEGER,
-    gender: DataTypes.STRING
-  }, {
-    hooks: {
-      beforeCreate(member, options) {
-        if (member.phone_number.substr(0, 2) == '08') {
-          member.phone_number = '+62' + member.phone_number.slice(1);
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: `Please enter a member's name`
         }
       }
     },
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: `Please enter a member's email`
+        }
+      }
+    },
+    address: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: `Please enter a member's address`
+        }
+      }
+    },
+    phone_number: {
+      type: DataTypes.INTEGER,
+      validate: {
+        notEmpty: {
+          msg: `Please enter a member's phone number`
+        },
+        checkPhoneCode(value) {
+          if (!(value.includes('+628'))) {
+            throw new Error('The phone number must begin with (628)');
+          }
+        }
+      }
+    },
+    gender: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: `Please select a member's gender`
+        }
+      }
+    }
+  }, {
     sequelize,
     modelName: 'Member',
   });

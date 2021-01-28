@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<%- include('../partials/head.ejs') %>
+<body>
+<%- include('../partials/navbar.ejs') %>
+    <h1>Rental List Data</h1>
+    <button class="btn-add"><a href="/rentals/<%= page %>/add">Add New Rental Data</a></button>
+    <form action="/rentals/<%= page %>" method="GET">
+        <label for="limit">Show:</label>
+        <select name="limit" id="optionPage">
+            <option value="5" <%= limit == "5" && 'selected' %>>5</option>
+            <option value="10" <%= limit == "10" && 'selected' %>>10</option>
+            <option value="15" <%= limit == "15" && 'selected' %>>15</option>
+            <option value="20" <%= limit == "20" && 'selected' %>>20</option>
+        </select>
+        <input type="submit" value="Submit" id="optionPage">
+    </form>
+    <% for (let i = 1; i <= totalPage; i++) { %>
+        <% if (i == page) { %>
+            <button class="btn-page-active"><a href="/rentals/<%= i %>?limit=<%= limit %>"><%= i %></a></button>
+        <% } else { %>
+            <button class="btn-page"><a href="/rentals/<%= i %>?limit=<%= limit %>"><%= i %></a></button>
+        <% } %>
+    <% } %>
+    <table>
+        <tr>
+            <th>No.</th>
+            <th>Member Name</th>
+            <th>Start Date</th>
+            <th>Returned Date</th>
+            <th>Is Returned</th>
+            <th>User Name</th>
+            <th>Action</th>
+        </tr>
+        <% dataRentals.forEach((rental, index) => { %>
+            <tr>
+                <td><%= offset + index + 1 %></td>
+                <td><%= rental.Member.withPrefixName() %></td>
+                <td><%= convertDate(rental.start_date) %></td>
+                <td><%= convertDate(rental.returned_date) %></td>
+                <td><%= rental.is_returned %> </td>
+                <td><%= rental.User.name %> </td>
+                <td><button class="btn-edit"><a href="/rentals/<%= rental.id %>/returned" class="a-button">Change Status</a></button><button class="btn-delete"><a href="/rentals/<%= rental.id %>/detail" class="a-button">View Detail</a></button></td>      
+            </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

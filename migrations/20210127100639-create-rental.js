@@ -8,6 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      rental_code: {
+        type: Sequelize.STRING
+      },
       memberId: {
         type: Sequelize.INTEGER,
         references: {
@@ -17,23 +20,14 @@ module.exports = {
         onUpdate: 'cascade',
         onDelete: 'cascade'
       },
-      bookId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'Books',
-          key: 'id'
-        },
-        onUpdate: 'cascade',
-        onDelete: 'cascade'
-      },
       start_date: {
         type: Sequelize.DATE
       },
-      expired_date: {
+      returned_date: {
         type: Sequelize.DATE
       },
-      status: {
-        type: Sequelize.STRING
+      is_returned: {
+        type: Sequelize.BOOLEAN
       },
       userId: {
         type: Sequelize.INTEGER,

@@ -1,8 +1,9 @@
 const ControllerMember = require('../controllers/controllerMember.js');
 const router = require('express').Router();
 
-router.get('/', (req, res) => res.redirect('/members/1'))
+router.get('/', (req, res) => res.redirect('/members/1'));
 router.get('/:page', ControllerMember.getList);
+router.post('/:page', ControllerMember.postList);
 
 router.get('/:page/add', ControllerMember.getAdd);
 router.post('/:page/add', ControllerMember.postAdd);
