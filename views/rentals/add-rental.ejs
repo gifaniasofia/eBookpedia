@@ -16,7 +16,7 @@
             <label for="bookId">Code Book :</label><br><br>
             <% dataBooks.forEach(book => { %>
                 <label class="checkbox-inline">
-                    <input type="checkbox" value="<%= book.id %>" name="bookId" required><%= generateCodeBook(book.title, book.id, book.isbn) %>
+                    <input type="checkbox" value="<%= book.id %>" name="bookId"><%= generateCodeBook(book.title, book.id, book.isbn) %>
                 </label>
             <% }) %><br><br>
 
